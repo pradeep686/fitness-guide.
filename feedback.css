@@ -30,6 +30,24 @@ body {
   }
   
 
+    /* Feedback Type Radio Buttons */
+    .radio-group {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .radio-option input {
+      margin-right: 5px;
+    }
+  
+    .description {
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
   /* Form Styles */
   form {
     display: flex;
@@ -49,23 +67,7 @@ body {
     letter-spacing: 0.5px;
   }
   
-  /* Feedback Type Radio Buttons */
-  .radio-group {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .radio-option input {
-    margin-right: 5px;
-  }
 
-  .description {
-    text-align: center;
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
   
   
   /* Input and Textarea Styles */
