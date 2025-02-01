@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Tracker</title>
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- javaScript link -->
+    <script>
+      // JavaScript function to navigate to Page 2
+      function goToPage2() {
+          window.location.href = "main/video.html"; // Replace "page2.html" with the actual file name of Page 2
+      }
+  </script>
+  </head>
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+          <span class="span">Fitness Tracker</span>
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            aria-label="close menu"
+            data-nav-toggler
+          >
+            <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+          </button>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link active" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="#class" class="navbar-link" data-nav-link>Best Foods</a>
+            </li>
+
+            <li>
+              <a href="feedback.html" class="navbar-link" data-nav-link target="_blank">Feedback</a>
+            </li>
+            
+            
+            
+            <li>
+              <a href="#contact us" class="navbar-link" data-nav-link>Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="javascript:void(0)" class="btn btn-secondary" onclick="goToPage2()" >Start Now</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </header>
+    
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section
+          class="section hero bg-dark has-after has-bg-image"
+          id="home"
+          aria-label="hero"
+          data-section
+          style="background-image: url('/images/hero-bg.png')"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                <strong class="strong">The Best</strong>Fitess Club
+              </p>
+
+              <h1 class="h1 hero-title">Work Hard To Be Fittest</h1>
+
+              <p class="section-text">
+                
+                Welcome to Fitness Tracker, your one-stop solution for all your fitness needs! Designed to be your ultimate fitness companion, our platform combines innovative technology 
+                with expert knowledge to support you in achieving a healthier, stronger, and more active lifestyle. From an extensive library of exercises to a diverse range of workouts 
+                tailored to your goals, Fitness Tracker provides everything you need in one convenient place.
+              </p>
+
+            </div>
+
+            <div class="hero-banner">
+              <img id="position"
+                src="main.jpg"
+                width="860"
+                height="753"
+                alt="hero banner"
+                class="w-100"
+              />
+
+            </div>
+
+            
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+        <section class="section about" id="about" aria-label="about">
+          <div class="container">
+           
+                
+
+            <div class="about-content">
+              <p class="section-subtitle">About Us</p>
+
+              <h2 class="h2 section-title">Welcome To Our Fitness Gym</h2>
+
+              <p class="section-text">
+                Fitness Tracker is built with a simple yet powerful purpose: to provide a comprehensive and reliable source of exercises and workouts 
+                on one page. We aim to empower our users by giving them the tools and information they need to make fitness an enjoyable and achievable part of their everyday lives.
+              </p>
+
+              <p class="section-text">
+                We are more than just a platform; we are a community where motivation, support, and transformation come together. Whether you are starting your fitness journey or looking to elevate your routine, Fitness Tracker ensures your experience is both seamless and rewarding.
+
+Let Fitness Tracker guide you toward a happier, healthier you. Together, let’s turn your wellness goals into an exciting and fulfilling adventure!
+              </p>
+
+              
+        
+            </div>
+          </div>
+        </section>
+
+
+        
+        
+
+        <!-- 
+        - #CLASS
+      -->
+
+        <section
+          class="section class bg-dark has-bg-image"
+          id="class"
+          aria-label="class"
+          style="background-image: url('/images/classes-bg.png')"
+        >
+          <div class="container"> 
+
+            <h2 class="h2 section-title text-center">
+              Healthy Food for Better Body
+            </h2>
+
+            <ul class="class-list has-scrollbar">
+              
+                       
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="egg.jpg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Eggs</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">                      
+                    Eggs are a powerhouse of nutrition, making them a perfect addition to your fitness routine. Packed with high-quality protein, they help repair and build muscles after a workout. Rich in essential vitamins like B12,
+                    eggs also boost energy and support overall health. Whether you eat them scrambled, boiled, or as part of a meal, eggs provide a quick and easy source of fuel for your body. Incorporating eggs into your diet can help 
+                    optimize your recovery, keeping you energized and strong for your next fitness session!
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="banana.jpg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Banana</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      Bananas are a fantastic choice for fitness enthusiasts, offering a quick and natural energy boost. Rich in potassium, they help maintain proper muscle function and prevent cramps during workouts.
+                      Bananas are also packed with carbohydrates, making them an ideal pre- or post-workout snack to replenish glycogen stores and fuel your body. Their natural sugars provide a steady release of energy, 
+                      keeping you going during intense exercise. Easy to carry and eat on the go, bananas are a simple and effective way to support your fitness and recovery goals! 
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="oats.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Oats</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      Oats are a powerhouse of nutrition, providing complex carbohydrates that give a steady release of energy, perfect for lasting stamina throughout the day. They’re rich in fiber, especially beta-glucan, which helps lower cholesterol levels and promotes heart health. Oats are also a source of essential minerals, including magnesium, iron, and zinc, which are vital for immune function and muscle recovery. Whether eaten as a warm bowl of oatmeal or added to smoothies and baked goods, oats make an excellent breakfast choice that keeps you full and supports digestive health.
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="spinach.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Spinach</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      
+Packed with iron, calcium, and antioxidants, spinach is a leafy green that strengthens muscles and boosts endurance. Its high iron content supports oxygen transport in the blood, essential for energy production during physical activity. Spinach also contains vitamins A and C, which promote healthy skin, immune support, and aid in recovery. Additionally, it’s rich in nitrates, compounds that have been shown to improve blood flow, helping to deliver oxygen to muscles more efficiently. Adding spinach to salads, smoothies, or as a cooked side dish enhances both flavor and nutritional value.
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="greek yogurt.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Greek Yogurt</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      
+Greek yogurt is a creamy and protein-rich snack, ideal for muscle repair and growth. With nearly twice the protein content of regular yogurt, it supports muscle maintenance, especially after workouts. This dairy product is also an excellent source of calcium, promoting bone health, and it contains probiotics, which support gut health and digestion. Greek yogurt’s versatility allows it to be enjoyed on its own, as a base for smoothies, or topped with fruits and nuts, making it a convenient way to boost protein intake throughout the day.
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="salmon.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Salmon</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      
+Rich in omega-3 fatty acids, salmon is a heart-healthy fish that benefits both the brain and body. Omega-3s reduce inflammation, which is crucial for recovery after intense workouts. Salmon is also high in protein, aiding in muscle repair and growth, and vitamin D, supporting bone health and immune function. This versatile fish can be grilled, baked, or included in salads for a delicious and nutritious meal, providing lasting energy and essential nutrients for overall wellness.
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="almonds.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Almonds</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      
+                      Almonds are a perfect snack for sustained energy and hunger control. They’re packed with healthy fats, fiber, and protein, which help keep you satisfied longer, making them a smart choice for weight management. Additionally, almonds are rich in vitamin E, a powerful antioxidant that protects cells from damage, and magnesium, which supports muscle function and reduces fatigue. Toss a handful into your bag for a quick, nutrient-dense snack that boosts both energy and focus, whether at work or before a workout. 
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="sweet potatoes.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Sweet Potatoes</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                     
+Sweet potatoes are a vibrant, nutrient-dense carbohydrate source with high levels of beta-carotene, which converts into vitamin A for eye health and immune support. Their complex carbs release energy steadily, making them a fantastic pre-workout choice for endurance. Additionally, sweet potatoes are rich in potassium, which helps maintain electrolyte balance, preventing cramps and promoting muscle recovery. They can be baked, roasted, or mashed for a versatile, naturally sweet addition to meals, supporting both energy and post-exercise recovery.
+                    </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+                <li class="scrollbar-item">
+                  <div class="class-card">
+                    <figure
+                      class="card-banner img-holder"
+                      style="--width: 416; --height: 240"
+                    >
+                      <img
+                        src="blueberries.jpeg"
+                        width="416"
+                        height="240"
+                        loading="lazy"
+                        alt="The Fitness Pack"
+                        class="img-cover"
+                      />
+                    </figure>
+
+                    <div class="card-content">
+                      <div class="title-wrapper">
+                        
+
+                        <h3 class="h3">
+                          <a href="" class="card-title">Blueberries</a>
+                        </h3>
+                      </div>
+
+                      <p class="card-text">
+                        
+                        Blueberries are a tiny but mighty fruit loaded with antioxidants, especially anthocyanins, which help reduce inflammation and aid in recovery after exercise. They’re high in fiber and vitamin C, supporting immune health and skin rejuvenation. Blueberries also have a low glycemic index, providing natural sweetness without causing spikes in blood sugar. They make a great snack or addition to smoothies, oatmeal, or yogurt, delivering a flavorful boost of vitamins and recovery-enhancing nutrients. 
+                      </p>
+
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="class-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 416; --height: 240"
+                  >
+                    <img
+                      src="quinoa.jpeg"
+                      width="416"
+                      height="240"
+                      loading="lazy"
+                      alt="The Fitness Pack"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="title-wrapper">
+                      
+
+                      <h3 class="h3">
+                        <a href="" class="card-title">Quinoa</a>
+                      </h3>
+                    </div>
+
+                    <p class="card-text">
+                      
+                      
+                      Quinoa is a nutrient-rich grain that’s a complete protein, containing all essential amino acids, making it perfect for vegetarians and vegans. It’s also high in fiber, aiding digestion, and contains important minerals like magnesium and iron for muscle and blood health. With a low glycemic index, quinoa provides steady energy and helps manage blood sugar levels. Its versatility allows it to be used in salads, soups, or as a base for main dishes, making it an excellent choice for balanced, nutrient-packed meals.
+                    </p>
+                  
+                </div>
+              </div>
+            </li>
+
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 416; --height: 240"
+                >
+                  <img
+                    src="avocado.jpeg"
+                    width="416"
+                    height="240"
+                    loading="lazy"
+                    alt="The Fitness Pack"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="title-wrapper">
+                    
+
+                    <h3 class="h3">
+                      <a href="" class="card-title">Avocado</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    
+                    
+Avocados are packed with healthy monounsaturated fats that support heart health and keep you full longer. They're rich in potassium, which is essential for muscle function and hydration, and contain fiber to aid digestion. Avocados also provide vitamin E, an antioxidant that supports skin health and helps reduce inflammation. Their creamy texture makes them a versatile addition to salads, sandwiches, or smoothies, providing both nutrients and flavor to meals aimed at maintaining a balanced, health-conscious diet. 
+                  </p>
+
+                
+              </div>
+            </div>
+          </li>
+            </ul>
+          </div>
+        </section>
+
+<section  id="contact us">
+        <div class="contact-us-container">
+          
+          <div class="contact-left">
+           
+            <h2 class="section-subtitle">Contact Us</h2>
+              <p>We’d love to hear from you! Reach out through any method here:</p>
+          </div>
+      
+          <div class="contact-center">
+              <p class="contact-info">
+                  <strong>Phone:</strong> 
+                  <a href="tel:8072550495">8072550495</a>
+                  <a href="tel:8668028480">8668028480</a>
+              </p>
+              <p class="contact-info">
+                  <strong>Email:</strong> 
+                  <a href="mailto:pradeepthirumurugann@gmail.com">pradeepthirumurugann@gmail.com</a>
+                  <a href="mailto:naveenkumarnk@gmail.com">naveenkumarnk@gmail.com</a>
+              </p>
+          </div>
+      
+          <div class="contact-right">
+              <h2>Follow Us</h2>
+              <div class="social-links">
+                  <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+                      <i class="fa fa-instagram"></i>
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.x.com" target="_blank" class="social-icon x">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      <div class="footer">
+          <p>Developed by Pradeep, Naveen Kumar</p>
+      </div>
+      
+      <!-- Include Font Awesome for icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    </section>
+
+ 
+  </body>
+</html>

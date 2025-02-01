@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Video Grid</title>
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Main Header -->
+<header class="header">
+    <h1 class="header-title">The Training Videos</h1>
+</header>
+
+<div>
+    
+    <div class="button-container">
+        <a href="../index.html" id="homeButton">
+            <i class="fa fa-home"></i> Home
+        </a>
+        
+        <!-- Article Button -->
+        <button class="article-button" onclick="toggleOverlay('articleOverlay')">
+            <i class="far fa-file-alt"></i> Article
+        </button>
+        <!-- Blueprint Button -->
+        <button class="blueprint-button" onclick="toggleOverlay('blueprintOverlay')">
+            <i class="fab fa-buromobelexperte"></i> Content
+        </button>
+    </div>
+</div>
+<!-- Blueprint Overlay -->
+<div class="overlay" id="blueprintOverlay">
+    <div class="overlay-content">
+        <h2 style="color:rgb(205, 155, 63);">Select an Exercise</h2>
+        <ul class="exercise-list">
+            <li><a href="#leg-exercises" onclick="closeOverlay()">Leg Exercises</a></li>
+            <li><a href="#back-exercises" onclick="closeOverlay()">Back Exercises</a></li>
+            <li><a href="#abs-exercises" onclick="closeOverlay()">Abdominal (Abs) Exercises</a></li>
+            <li><a href="#cardio-exercises" onclick="closeOverlay()">Cardio Exercises</a></li>
+            <li><a href="#lower-body-exercises" onclick="closeOverlay()">Lower Body Exercises</a></li>
+            <li><a href="#shoulder-exercises" onclick="closeOverlay()">Shoulder Exercises</a></li>
+            <li><a href="#neck-exercises" onclick="closeOverlay()">Neck Exercises</a></li>
+            <li><a href="#face-exercises" onclick="closeOverlay()">Face Exercises</a></li>
+        </ul>
+        <button class="close-button" onclick="toggleOverlay('blueprintOverlay')">Close</button>
+    </div>
+</div>
+
+<!-- Article Overlay -->
+<div class="overlay" id="articleOverlay">
+    <div class="overlay-content">
+        <h2 style="color:rgb(205, 155, 63);">Article from the World Health Organization (WHO)</h2>
+        <ul class="tips-list">
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity" target="_blank" onclick="closeOverlay()">Physical Activity</a></li>
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet"  target="_blank" onclick="closeOverlay()">Healthy Diet</a></li>
+            <li><a href="https://www.who.int/news/item/17-07-2023-who-updates-guidelines-on-fats-and-carbohydrates" target="_blank" onclick="closeOverlay()"> Guidelines On Fats And Carbohydrates</a></li>
+            <li><a href="https://www.who.int/europe/news/item/07-06-2022-cycling-and-walking-can-help-reduce-physical-inactivity-and-air-pollution--save-lives-and-mitigate-climate-change" target="_blank" onclick="closeOverlay()">Cycling and walking </a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK566046/" target="_blank" onclick="closeOverlay()">Health Recommendations</a></li>
+            <li><a href="https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" target="_blank" onclick="closeOverlay()">Children Need To Sit Less And Play More</a></li>
+            <li><a href="https://www.medicalnewstoday.com/articles/cardio-exercises-at-home#beginner-exercises" target="_blank" onclick="closeOverlay()">20 Cardio Exercises To Do At Home </a></li>
+        </ul>
+        <button class="close-button" onclick="toggleOverlay('articleOverlay')">Close</button>
+    </div>
+</div>
+
+
+
+
+
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+    ↑
+</button>
+
+<script>
+
+function toggleOverlay(id) {
+    const overlay = document.getElementById(id);
+    if (overlay) {
+        const isVisible = overlay.style.display === "block";
+        overlay.style.display = isVisible ? "none" : "block";
+    }
+}
+
+// Close the overlay when any exercise or tip link is clicked
+function closeOverlay() {
+    const overlays = document.querySelectorAll('.overlay');
+    overlays.forEach(overlay => {
+        overlay.style.display = 'none'; // Hide all overlays
+    });
+}
+
+
+
+    // Scroll to Top Function
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show button when scrolled down
+    window.onscroll = function() {
+        const btn = document.getElementById("backToTopBtn");
+        btn.style.display = window.pageYOffset > 100 ? "block" : "none";
+    }
+</script>
+
+
+
+
+
+<section id="back-exercises" class="exercise-section">
+    <h1 class="heading1">Leg Exercises</h1>
+    
+    <div class="exercise-box">
+        <h2 class="heading">Squats</h2>
+        <h3>Description:</h3>
+        <p>Stand with feet shoulder-width apart, bend your knees, and lower your hips as if sitting in a chair.
+            Ensure your knees don't go past your toes, then return to standing.</p>
+        <h3>Benefits:</h3>
+        <p>Strengthens the quadriceps, hamstrings, and glutes, while improving flexibility and balance. 
+            It also helps boost core stability and builds lower body strength.</p>
+<!-- Video Rows with Separate Headings -->
+<div class="scrollable-container">
+    <!-- Row 1 Videos -->
+     
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/IwbbsjSNvnU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/HAntM1NFq8Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/965Fwq2aVIo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/x5tcKrm092A" frameborder="0" allowfullscreen></iframe>
+    </div>
+  
+    
+</div>
+<div class="divider"></div>
+
+<h2 class="heading">Lunges</h2>
+<h3>Description:</h3>
+<p>Stand with feet hip-width apart, step forward with one leg and lower your body until your front knee is at a 90-degree angle. Return to starting position.</p>
+<h3>Benefits:</h3>
+<p>Strengthens legs and glutes, improves balance and flexibility.</p>
+
+<div class="scrollable-container">
+    <!-- Row 2 Videos -->
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/auBLPXO8Fww" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/qLBImHhCXSw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/818SkLAPyKY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/xQdyIrSSFnE" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/kQIRIRO5afg" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="divider"></div>
+
+<!-- Additional exercises with corrected URLs -->
+
+<h2 class="heading">Leg Raises</h2>
+<h3>Description:</h3>
+<p>Lie on your back, place hands under your hips, and lift legs up until perpendicular, then slowly lower them back down.</p>
+<h3>Benefits:</h3>
+<p>Engages the lower abdominal muscles, improves core strength.</p>
+
+<div class="scrollable-container">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/qvi8aM02_GY" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="divider"></div>
+
+<!-- Continue with other exercises in the same corrected format -->
+
+<h2 class="heading">High Knees</h2>
+<h3>Description:</h3>
+<p>Run in place, lifting knees as high as possible with each step.</p>
+<h3>Benefits:</h3>
+<p>Enhances cardiovascular fitness, strengthens legs, and improves agility.</p>
+
+<div class="scrollable-container">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/ZNDHivUg7vA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/FvjmPRU3zn4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+</div>
+
+<!-- Repeat for remaining exercises, replacing youtu.be links with youtube.com/embed links -->
+</section>
+
+<section id="back-exercises" class="exercise-section">
+    <h1 class="heading1">Back Exercises</h1>
+    
+    <div class="exercise-box">
+        <h2 class="heading">Pull-Ups</h2>
+        <h3>Description:</h3>
+        <p>A bodyweight exercise where you pull your body up to a bar, engaging the lats and upper back.</p>
+        <h3>Benefits:</h3>
+        <p>Builds upper body strength, especially in the lats and shoulders.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/eGo4IYlbE5g" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/g9LPCRtUDJE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="exercise-box">
+        <h2 class="heading">Lat Pulldowns</h2>
+        <h3>Description:</h3>
+        <p>Uses a machine to pull a weighted bar down toward your chest, targeting the latissimus dorsi.</p>
+        <h3>Benefits:</h3>
+        <p>Increases back width and strengthens shoulder and upper back muscles.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/SALxEARiMkw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Replaced CAwf7n6Luuc with a working URL -->
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/CAwf7n6Luuc" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/trZQjegcRx0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="abs-exercises" class="exercise-section">
+    <h1 class="heading1">Abdominal (Abs) Exercises</h1>
+    
+    <div class="exercise-box">
+        <h2 class="heading">Crunches</h2>
+        <h3>Description:</h3>
+        <p>Lying on your back, you lift your upper torso toward your knees to target the upper abs.</p>
+        <h3>Benefits:</h3>
+        <p>Tones and strengthens the rectus abdominis.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/O0pIQ2UqeCY" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/9T4WQGlKCRk" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <!-- Additional exercises for abs can follow the same structure -->
+</section>
+
+<section id="cardio-exercises" class="exercise-section">
+    <h1 class="heading1">Cardio Exercises</h1>
+    <h2 class="heading">Running (Outdoor or Treadmill)</h2>
+    <h3>Description:</h3>
+    <p>Jogging or running on a flat or inclined surface for cardiovascular conditioning.</p>
+    <h3>Benefits:</h3>
+    <p>Boosts endurance, burns calories, and strengthens the legs and core.</p>
+    <div class="scrollable-container">
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/K6I24WgiiPw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/7Rh6rRqfcKc" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="divider"></div>
+    
+    <h2 class="heading">Cycling</h2>
+    <h3>Description:</h3>
+    <p>Cycling on a stationary bike or outdoors, targeting the lower body.</p>
+    <h3>Benefits:</h3>
+    <p>Enhances leg strength, endurance, and provides low-impact cardiovascular benefits.</p>
+    <div class="scrollable-container">
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/0MLnC3bzXgQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="lower-body-exercises" class="exercise-section">
+    <h1 class="heading1">Lower Body Exercises</h1>
+    <h2 class="heading">Calf Raises</h2>
+    <h3>Description:</h3>
+    <p>Standing on your toes and lifting your heels to engage the calf muscles.</p>
+    <h3>Benefits:</h3>
+    <p>Strengthens and tones the calves, improving ankle stability.</p>
+    <div class="scrollable-container">
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/d2GgSoHvIXo" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="divider"></div>
+    
+    <h2 class="heading">Glute Bridges</h2>
+    <h3>Description:</h3>
+    <p>Lying on your back with knees bent, lift hips to engage the glutes and lower back.</p>
+    <h3>Benefits:</h3>
+    <p>Strengthens the glutes, lower back, and improves hip stability.</p>
+    <div class="scrollable-container">
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/Q_Bpj91Yiis" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="divider"></div>
+    
+    <h2 class="heading">Step-Ups</h2>
+    <h3>Description:</h3>
+    <p>Stepping onto a bench or platform, alternating legs, to engage quads and glutes.</p>
+    <h3>Benefits:</h3>
+    <p>Tones the legs and improves balance and coordination.</p>
+    <div class="scrollable-container">
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/wfhXnLILqdk" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="divider"></div>
+    
+    <h2 class="heading">Leg Press</h2>
+    <h3>Description:</h3>
+    <p>Using a leg press machine to push weights away with your feet.</p>
+    <h3>Benefits:</h3>
+    <p>Builds strength in the quads, hamstrings, and glutes without putting strain on the lower back.</p>
+    <div class="scrollable-container">
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/p5dCqF7wWUw" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+        
+        <section id="shoulder-exercises" class="exercise-section">
+        <h1 class="heading1">Shoulder Exercises</h1>
+        <h2 class="heading">Lateral Raises</h2>
+        <h3>Description:</h3>
+        <p>Raising dumbbells out to the side to target the side deltoids.</p>
+        <h3>Benefits:</h3>
+        <p>Tones shoulders and improves shoulder definition.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/PzsMitRdI_8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Front Raises</h2>
+        <h3>Description:</h3>
+        <p>Raising dumbbells in front of the body to work the front deltoids.</p>
+        <h3>Benefits:</h3>
+        <p>Strengthens the shoulders and enhances arm stability.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/Ijd6uK8Y6lc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Reverse Flyes</h2>
+        <h3>Description:</h3>
+        <p>With dumbbells in each hand, bend forward and lift arms outward to engage rear delts.</p>
+        <h3>Benefits:</h3>
+        <p>Works the back of the shoulders and improves posture.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/evXOlgLTPCw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+        
+        <section id="neck-exercises" class="exercise-section">
+        <h1 class="heading1">Neck Exercises</h1>
+        <h2 class="heading">Neck Tilts</h2>
+        <h3>Description:</h3>
+        <p>Slowly tilting the head from side to side to stretch the neck.</p>
+        <h3>Benefits:</h3>
+        <p>Relieves neck tension and improves flexibility.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/QatBdq1IMAw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Chin Tucks</h2>
+        <h3>Description:</h3>
+        <p>Pulling the chin towards the neck to engage the front neck muscles.</p>
+        <h3>Benefits:</h3>
+        <p>Relieves tension and strengthens the back of the neck.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/ML9tj2g83Q8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Neck Extension</h2>
+        <h3>Description:</h3>
+        <p>Tilting the head back to stretch the neck extensors.</p>
+        <h3>Benefits:</h3>
+        <p>Reduces forward head posture and strengthens the front of the neck.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/gIBoxQ6AlS0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>  
+    </section>  
+
+    <section id="face-exercises" class="exercise-section">
+        <h1 class="heading1">Face Exercises</h1>
+        
+        <h2 class="heading">The Cheek Lifter</h2>
+        <h3>Description:</h3>
+        <p>This exercise involves opening your mouth into an “O” shape, lifting your upper lip over your teeth, and then smiling to lift your cheeks before relaxing back to the "O."</p>
+        <h3>Benefits:</h3>
+        <p>Regular practice helps in toning the cheek muscles, reducing sagging in the mid-face, and achieving a naturally uplifted look, making your cheeks appear fuller and more youthful.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/jl9AMHkLR0I" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Jaw Release</h2>
+        <h3>Description:</h3>
+        <p>Mimic a chewing motion with your lips closed while gently humming. Then press your tongue to the roof of your mouth and hold.</p>
+        <h3>Benefits:</h3>
+        <p>This exercise helps define the jawline and reduce tension in the jaw area. It also aids in minimizing the appearance of a double chin by strengthening the jaw and neck muscles.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/ihxECyZJz2M" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-box">
+                      <iframe src="https://www.youtube.com/embed/IX75czmw-vw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Neck Lift</h2>
+        <h3>Description:</h3>
+        <p>Tilt your head back to look at the ceiling, then pucker your lips as if you’re kissing the ceiling, and release.</p>
+        <h3>Benefits:</h3>
+        <p>This exercise strengthens and tones the muscles in the neck, reducing sagging and preventing the formation of necklines. It also improves the overall appearance of the lower face and neck area.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/46ohSM_m5Ww" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <h2 class="heading">Remove Double Chin</h2>
+        <h3>Description:</h3>
+        <p>Sit with your back straight. Tilt your head back to look at the ceiling. Press your tongue against the roof of your mouth and slowly lower your chin towards your chest. Relax and repeat.</p>
+        <h3>Benefits:</h3>
+        <p>Engages the muscles in the neck and under the chin, effectively reducing excess fat and tightening the area.</p>
+        <div class="scrollable-container">
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/ScIJss6esTE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
+
+    </section>
+</body>
+</html>

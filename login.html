@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign-Up</title>
+  <link rel="stylesheet" href="login.css">
+  <!-- Firebase SDK v8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Login Section -->
+    <div class="auth-card" id="login-card">
+      <p id="pagename" style="color: #eef0f1;">
+        <b>FITNESS </b><span style="color: hsl(12, 98%, 52%);"><b>TRACKER</b></span>
+      </p>
+      <h1 class="auth-title">Login</h1>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-username-email" class="form-label">Username or E-mail</label>
+          <input type="text" id="login-username-email" placeholder="Enter your username or email">
+        </div>
+        <div class="form-group">
+          <label for="login-password" class="form-label">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="auth-btn">Login</button>
+        <p class="switch-link">
+          Don't have an account? 
+          <span id="to-signup" class="link">Sign Up</span>
+        </p>
+      </form>
+    </div>
+
+    <!-- Sign-Up Section -->
+    <div class="auth-card hidden" id="signup-card">
+      <p id="pagename" style="color: #eef0f1;">
+        <b>FITNESS </b><span style="color: hsl(12, 98%, 52%);"><b>TRACKER</b></span>
+      </p>
+      <h1 class="auth-title">Sign Up</h1>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-username-email" class="form-label">Username or E-mail</label>
+          <input type="text" id="signup-username-email" placeholder="Enter your username or email">
+        </div>
+        <div class="form-group">
+          <label for="signup-password" class="form-label">Password</label>
+          <input type="password" id="signup-password" placeholder="Create a password">
+        </div>
+        <button type="submit" class="auth-btn">Sign Up</button>
+        <p class="switch-link">
+          Already have an account? 
+          <span id="to-login" class="link">Login</span>
+        </p>
+      </form>
+    </div>
+  </div>
+  <!-- Firebase and Custom JS -->
+  <script>
+    // Firebase Configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBQF1EnfNE0YoNWN7EKxXTs4yNdrfm759o",
+        authDomain: "fitness-tracker-fb3a6.firebaseapp.com",
+        projectId: "fitness-tracker-fb3a6",
+        storageBucket: "fitness-tracker-fb3a6.firebasestorage.app",
+        messagingSenderId: "561670382882",
+        appId: "1:561670382882:web:d34d86f4053a5768bfb17b",
+        measurementId: "G-PLTVKE2EZF"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+
+    // Toggle between Login and Sign-Up cards
+    const loginCard = document.getElementById('login-card');
+    const signupCard = document.getElementById('signup-card');
+
+    document.getElementById('to-signup').addEventListener('click', () => {
+      loginCard.classList.add('hidden');
+      signupCard.classList.remove('hidden');
+    });
+
+    document.getElementById('to-login').addEventListener('click', () => {
+      signupCard.classList.add('hidden');
+      loginCard.classList.remove('hidden');
+    });
+
+    // Sign-Up Form Submission
+    document.getElementById('signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('signup-username-email').value;
+      const password = document.getElementById('signup-password').value;
+
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          alert("Sign-Up Successful!");
+          signupCard.classList.add('hidden');
+          loginCard.classList.remove('hidden');
+        })
+        .catch((error) => {
+          alert("Sign-Up Error: " + error.message);
+        });
+    });
+
+    // Login Form Submission
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-username-email').value;
+      const password = document.getElementById('login-password').value;
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          alert("Login Successful!");
+          window.location.href = "index.html"; // Redirect to home page
+        })
+        .catch((error) => {
+          alert("Login Error: " + error.message);
+        });
+    });
+  </script>
+</body>
+</html>

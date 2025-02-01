@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Feedback Form</title>
+  <link rel="stylesheet" href="feedback.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Feedback Form</h1>
+    <p class="description">We would love to hear your thoughts, suggestions, concerns, or problems with anything so we can improve!</p>
+    
+    <form id="feedback-form">
+      <!-- Feedback Type -->
+      <div class="form-group">
+        <label class="form-label">Feedback Type</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="type" value="comments">
+            <span class="custom-radio"></span> Comments
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="type" value="suggestions">
+            <span class="custom-radio"></span> Suggestions
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="type" value="questions">
+            <span class="custom-radio"></span> Questions
+          </label>
+        </div>
+      </div>
+      
+      <!-- Feedback Description -->
+      <div class="form-group">
+        <label for="feedback" class="form-label">Describe Your Feedback</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Type your feedback here..."></textarea>
+      </div>
+      
+      <!-- Name Fields -->
+      <div class="form-group name-fields">
+        <div>
+          <label for="first-name" class="form-label">First Name</label>
+          <input type="text" id="first-name" name="first-name" placeholder="First Name">
+        </div>
+        <div>
+          <label for="last-name" class="form-label">Last Name</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+        </div>
+      </div>
+      
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="ex: myname@example.com">
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>     
+  </div>
+  <script>
+    // Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBQF1EnfNE0YoNWN7EKxXTs4yNdrfm759o",
+    authDomain: "fitness-tracker-fb3a6.firebaseapp.com",
+    projectId: "fitness-tracker-fb3a6",
+    storageBucket: "fitness-tracker-fb3a6.firebasestorage.app",
+    messagingSenderId: "561670382882",
+    appId: "1:561670382882:web:d34d86f4053a5768bfb17b",
+    measurementId: "G-PLTVKE2EZF"
+};
+
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database(app);
+
+// Feedback form submission
+document.getElementById('feedback-form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form submission to the server
+  
+  const feedbackType = document.querySelector('input[name="type"]:checked');
+  const feedbackText = document.getElementById('feedback').value.trim();
+  const firstName = document.getElementById('first-name').value.trim();
+  const lastName = document.getElementById('last-name').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  // Check for form completion
+  if (!feedbackType || !feedbackText || !firstName || !lastName || !email) {
+    alert("Please complete all fields before submitting the form.");
+    return;
+  }
+
+  // Prepare data for Firebase
+  const feedbackData = {
+    type: feedbackType.value,
+    text: feedbackText,
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    submittedAt: new Date().toISOString()
+  };
+
+  // Push data to Firebase Realtime Database
+  const feedbackRef = database.ref('feedback');
+  feedbackRef.push(feedbackData)
+    .then(() => {
+      alert("Feedback Submitted Successfully. Thank you!");
+      document.getElementById('feedback-form').reset(); // Reset the form
+      window.location.href = "index.html"; // Navigate to home page
+    })
+    .catch((error) => {
+      alert("Error submitting feedback: " + error.message);
+    });
+});
+
+  </script>
+  <script src="feedback.js"></script>
+</body>
+</html>

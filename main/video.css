@@ -1,0 +1,485 @@
+/* Header styling */
+.header {
+    background: linear-gradient(135deg, #000, #333); /* Black gradient */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(255, 127, 0, 0.15)); /* Subtle orange overlay */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header-title {
+    color: #FF7F00; /* Orange color */
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.heading {
+    color: rgb(235, 79, 79);
+}
+.heading1 {
+    color: rgb(65, 183, 22);
+}
+
+.header-title::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #FF7F00; /* Orange underline */
+    margin: 8px auto 0;
+    transition: width 0.4s ease;
+}
+
+.header-title:hover::after {
+    width: 90%; /* Underline expands on hover */
+}
+
+.header-title:hover {
+    color: #ffa64d; /* Slightly lighter orange on hover */
+    transition: color 0.3s ease;
+}
+
+
+
+/* Scrollable container styling */
+.scrollable-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* Video box styling */
+.video-box {
+    flex: 0 0 23%; /* Adjust width for 4 columns visible at once */
+    padding: 5px;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 220px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+/* bluprint */
+/* styles.css */
+
+/* Blueprint Button */
+/* Advanced Blueprint Button Style */
+/* General reset for a clean start */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeded;
+}
+
+/* Container for buttons */
+.button-container {
+    display: flex;
+    align-items: center; /* Aligns buttons vertically */
+    justify-content: center; /* Centers buttons horizontally on the page */
+    gap: 20px; /* Adds spacing between buttons */
+    margin: 20px; /* Adds spacing around the container */
+}
+
+/* Home button styles */
+/* General reset for a clean start */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Home button styles */
+#homeButton {
+    margin-right: 1073px;
+    align-items: center;
+    padding: 12px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: #ff6f00;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    gap: 9px; /* Adds space between the icon and text */
+}
+
+/* Home button hover effect */
+#homeButton:hover {
+    background-color: #e88a2b; /* Faded orange */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Home button active state */
+#homeButton:active {
+    background-color: #c75908; /* Slightly darker orange */
+    transform: scale(0.95);
+}
+
+/* Icon styles */
+#homeButton .fa-home {
+    font-size: 20px; /* Adjust icon size */
+}
+
+
+/* Blueprint button styles */
+/* Wrapper for aligning buttons to the right */
+.button-container {
+    
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+     /* Optional: Add spacing from the right edge */
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Common button styles */
+/* Wrapper for aligning buttons to the right */
+.button-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+    margin-right: 20px; /* Optional: Add spacing from the right edge */
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Common button styles */
+button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff8a00, #ff3d00);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 61, 0, 0.3);
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+/* Hover effects */
+.blueprint-button:hover,
+.article-button:hover {
+    background: linear-gradient(45deg, #ff6f00, #ff5722);
+    box-shadow: 0 8px 15px rgba(255, 61, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.blueprint-button:active,
+.article-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(255, 61, 0, 0.2);
+}
+
+/* Icon styles */
+button i {
+    font-size: 24px;
+}
+
+
+
+/* Overlay Styling */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+    z-index: 1000;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjusted width */
+    max-width: 600px; /* Limit to avoid excessive size */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for lists inside overlay */
+.exercise-list, .tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.exercise-list li, .tips-list li {
+    margin: 10px 0;
+    font-size: 1.2rem; /* Adjust font size */
+    color: #444; /* Default text color */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Remove link style and add hover effect */
+.exercise-list li a, .tips-list li a {
+    text-decoration: none;
+    color: inherit; /* Inherit color */
+}
+
+.exercise-list li:hover, .tips-list li:hover {
+    color: green; /* Green on hover */
+    font-weight: bold; /* Optional bold effect */
+}
+
+/* Close Button */
+.close-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.close-button:hover {
+    background-color: green; /* Green hover for the button */
+}
+
+
+
+
+/*top navigating button */
+/* Back to Top Button */
+#backToTopBtn {
+    text-align: center;
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    width: 60px; /* Reduced size */
+    height: 50px; /* Reduced size */
+    background: linear-gradient(135deg, #0ed891, #23d1ff);
+    color: white;
+    font-size: 25px; /* Reduced font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    display: none; /* Initially hidden */
+    z-index: 9999;
+
+    /* Flexbox for centering the arrow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTopBtn:hover {
+    background: linear-gradient(135deg, #fd8b00, #dca910);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#backToTopBtn.show {
+    display: block; /* Display when scrolled */
+    animation: fadeIn 0.4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exercise-section {
+    padding: 20px 0;
+}
+.exercise-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exercise-description {
+    font-size: 0.9em;
+    color: #666;
+}
+.scrollable-container {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px 0;
+}
+.video-box {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 10px;
+}
+.divider {
+    border-top: 5px solid orange;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Green Box Covering Entire Exercise Type */
+.exercise-section {
+    padding: 20px;
+    margin: 20px 0;
+    border: 4px solid #e19613; /* Green border */
+    border-radius: 15px;
+    background-color: #ffffff; /* Light green background */
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2); /* Green shadow for depth */
+}
+
+/* Orange Box Covering Individual Exercise */
+
+
+/* Headings and Descriptions */
+.heading1 {
+    color: #dc8c0d;
+    font-size: 36px; /* Increase font size for emphasis */
+    font-weight: bold;
+    text-transform: uppercase; /* Makes the text appear in big letters */
+    letter-spacing: 2px; /* Adds spacing between letters for a modern feel */
+    margin-bottom: 20px; /* Extra space below the heading */
+    text-align: center;
+    position: relative;
+}
+
+/* Adding a subtle shadow effect */
+.heading1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ba8706; /* Matches the heading color */
+    border-radius: 2px; /* Rounded edges for a modern look */
+    opacity: 0.8;
+}
+
+
+
+.heading {
+    color: #c75305;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* Video Box Styling */
+.scrollable-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: 2px solid #ff9800;
+}
+
+/* Paragraph Styling */
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Scrollable Container Style */
+.scrollable-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-top: 10px;
+}
+
+
+
+
